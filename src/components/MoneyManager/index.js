@@ -159,6 +159,7 @@ class MoneyManager extends Component {
                 TITLE
               </label>
               <input
+                id="title"
                 onChange={this.onTitle}
                 className="input-box"
                 type="text"
@@ -169,6 +170,7 @@ class MoneyManager extends Component {
                 AMOUNT
               </label>
               <input
+                id="amount"
                 onChange={this.onAmount}
                 className="input-box"
                 type="text"
@@ -178,7 +180,12 @@ class MoneyManager extends Component {
               <label className="tag" htmlFor="type">
                 TYPE
               </label>
-              <select className="input-box" onChange={this.onType} value={type}>
+              <select
+                id="type"
+                className="input-box"
+                onChange={this.onType}
+                value={type}
+              >
                 {transactionTypeOptions.map(eachTrans => (
                   <OptionItem optionsData={eachTrans} />
                 ))}
