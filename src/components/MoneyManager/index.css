@@ -1,0 +1,131 @@
+/* Write your CSS here */
+.bg-card {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-section {
+  background-image: url(https://assets.ccbp.in/frontend/react-js/money-manager/money-manager-bg.png);
+  width: 800px;
+  background-size: cover;
+  padding: 50px 53px 0;
+  height: 190px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.welcome-text {
+  color: #475569;
+  font-size: 30px;
+}
+
+.caption {
+  color: #7e858e;
+  font-size: 16px;
+}
+
+.color-text {
+  color: #0b69ff;
+}
+
+.middle-section {
+  background-color: transparent;
+}
+
+.mode-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form {
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 0 16px;
+  margin-right: 40px;
+}
+
+.form-title {
+  color: #334155;
+  font-size: 22px;
+}
+
+.tag {
+  color: #cbd5e1;
+  font-size: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.input-box {
+  border: 1px solid #cbd5e1;
+  outline: none;
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  height: 40px;
+}
+
+.form-btn {
+  background-color: #0b69ff;
+  color: #ffffff;
+  width: 80px;
+  height: 30px;
+  align-self: flex-start;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.left-bar {
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0 16px;
+}
+
+.left-title {
+  color: #334155;
+  font-size: 22px;
+}
+
+.history-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+.title-row {
+  display: flex;
+  border: 1px solid #cbd5e1;
+  padding: 0px 18px;
+}
+
+.col {
+  color: #1e293b;
+  font-size: 12px;
+  width: 100px;
+  font-weight: 700;
+}
