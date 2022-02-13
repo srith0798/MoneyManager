@@ -21,7 +21,7 @@ function OptionItem(props) {
   const {optionsData} = props
   const {optionId, displayText} = optionsData
   return (
-    <option id={optionId} value={displayText}>
+    <option id={optionId} value={optionId}>
       {displayText}
     </option>
   )
@@ -79,7 +79,7 @@ class MoneyManager extends Component {
       amount: '',
       title: '',
     }))
-    if (type === 'Income') {
+    if (type === 'INCOME') {
       this.setState(prevState => ({
         incomeAmt: prevState.incomeAmt + parseInt(amount),
       }))
@@ -141,7 +141,7 @@ class MoneyManager extends Component {
             </p>
           </div>
           <div className="middle-section">
-            <ul className="mode-list">
+            <div className="mode-list">
               {itemDataList.map(eachItem => (
                 <MoneyDetails
                   key={eachItem.testId}
@@ -150,7 +150,7 @@ class MoneyManager extends Component {
                   items={eachItem}
                 />
               ))}
-            </ul>
+            </div>
           </div>
           <div className="bottom-section">
             <form className="form" onSubmit={this.onAddLedger}>
@@ -187,7 +187,10 @@ class MoneyManager extends Component {
                 value={type}
               >
                 {transactionTypeOptions.map(eachTrans => (
-                  <OptionItem optionsData={eachTrans} />
+                  <OptionItem
+                    key={eachTrans.optionId}
+                    optionsData={eachTrans}
+                  />
                 ))}
               </select>{' '}
               <button className="form-btn" type="submit">
@@ -198,7 +201,7 @@ class MoneyManager extends Component {
               <h1 className="left-title">History</h1>
               <div>
                 <ul className="history-list">
-                  <li className="title-row">
+                  <li id="title" className="title-row">
                     <p className="col">Title</p>
                     <p className="col">Amount</p>
                     <p className="col">Type</p>
